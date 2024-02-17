@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+.myShadow {
+  box-shadow: 10px 4px 21.100000381469727px 0px #00000061;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+form label {
+  position: relative;
+  padding-left: 25px;
+}
+form label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #494949;
+}
+form input[type="radio"]:checked + label::after,
+form input[type="radio"]:not(:checked) + label::after {
+  content: "";
+  background-color: #202020;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  border-radius: 50%;
+}
+form input[type="radio"]:checked + label::after {
+  background-color: #53acff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
